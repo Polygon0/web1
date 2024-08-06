@@ -1,0 +1,80 @@
+@keyframes HOP {
+	0%
+	{
+		transform: translateY(0px);
+	}
+	50%
+	{
+		transform: translateY(20px);
+	}
+	
+}
+html {
+	background-image: url("starry.gif");
+}
+.TitleContainer{
+	
+	position: absolute;
+	top: 0px; right: 0px; left: 0px; 
+
+	color: rgb(255, 255, 255);
+
+	border: 2px solid rgb(159, 220, 255);
+	border-style: none none dashed none;
+	p
+	{
+		padding: 1%;
+		text-align: left;
+		color: rgb(255, 255, 255);
+		font:message-box;
+		font-size: 20px
+	}
+	background-color: rgba(96, 13, 190, 0.89);
+}
+.TitleContainer p:hover
+{
+	transition: all 0.5s;
+	color: rgb(0, 255, 128);
+	transform: scaleY(2);
+}
+.MenuContainer{
+	
+	color: aliceblue;
+	display: flex;
+	justify-content: center;
+	div{
+		text-align: center;
+
+		border: 1px solid white;
+		border-radius: 10px;
+		
+		margin: auto;
+		
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+	.HITBOX
+	{
+		margin-top: 230px;
+		
+		padding: 0px;
+		width: 25%;
+		border: none;
+	}
+	img{
+		width: 100%;
+		
+		border-radius: 100%;
+	}
+
+}
+.MenuContainer .HITBOX:hover > div{	
+	background-color:rgb(255, 120, 96);
+	transition: all 0.4s;
+	rotate: -10deg;
+	scale: 1.1;
+
+	animation-name: HOP;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
